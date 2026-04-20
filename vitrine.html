@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext y='14' font-size='16'%3E📖%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="vitrine.css">
+</head>
+<body>
+    <header>
+        <h1>Mon Profil</h1>
+    </header>
+    
+    <main class="portfolio">
+        <div class="portfolio-item mcd">
+            <img src="https://res.cloudinary.com/westfielddg/image/upload/westfield-media/fr/retailer/logos/v5ooq7eughwzibshbpue.jpg" onclick="toggleText(this)">
+            <p>J'aime bien sortir dehors avec mes amis et manger au McDonald's. Que ce soit pour une balade au parc, une partie de foot improvisée ou simplement discuter autour d'un burger, ces moments me permettent de me détendre et de renforcer mes liens avec mes proches. Le McDonald's est toujours une option pratique et savoureuse pour finir la journée en beauté.</p>
+        </div>
+        
+        <div class="portfolio-item ps5">
+            <img src="https://static.fnac-static.com/multimedia/Images/FR/MDM/c5/8f/56/22450117/3756-1/tsp20260328094204/Console-Sony-PS5-Slim-Edition-Standard-Blanc-et-Noir.jpg" alt="Projet 2" onclick="toggleText(this)">
+            <p>J'aime bien jouer aux jeux vidéo en ligne avec mes amis. Que ce soit sur ma PS5 ou d'autres plateformes, des jeux comme Fortnite, Call of Duty ou FIFA nous permettent de passer des heures amusantes ensemble, même à distance. C'est une façon interactive de rester connectés et de partager des moments de compétition et de rire.</p>
+        </div>
+        
+        <div class="portfolio-item spotify">
+            <img src="https://fr.billboard.com/wp-content/uploads/2025/04/6642202-spotify-icon-spotify-logo-spotify-symbole-logo-set-gratuit-vectoriel.jpg" alt="Projet 3" onclick="toggleText(this)">
+            <p>J'aime également écouter de la musique sur Spotify. J'ai des playlists pour tous les moods : du rap français avec des artistes comme PNL ou Ninho, de la pop internationale avec Taylor Swift ou Ed Sheeran, et même de la musique électronique pour me motiver. C'est ma façon de découvrir de nouveaux sons et de me relaxer après une longue journée.</p>
+        </div>
+        
+    </main>
+    <script>
+        function toggleText(img) {
+            var allP = document.querySelectorAll('.portfolio-item p');
+            allP.forEach(function(p) {
+                p.classList.remove('show');
+            });
+            var p = img.nextElementSibling;
+            p.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
